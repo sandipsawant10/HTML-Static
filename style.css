@@ -1,0 +1,1056 @@
+/* =============================================
+   RESET & BASE
+   ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f5f5f7;
+  overflow-x: hidden;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+/* =============================================
+   CONTAINER
+   ============================================= */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+/* =============================================
+   NAVBAR — Desktop
+   ============================================= */
+.navbar {
+  width: 100%;
+  background: #f5f5f7;
+}
+
+.nav-wrapper {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-wrapper img {
+  width: 159px;
+  height: 58px;
+  object-fit: contain;
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-left: 60px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4356d6;
+}
+
+.nav-links .active {
+  color: #4356d6;
+}
+
+/* Contact Us button */
+.contact-btn {
+  width: 140px;
+  height: 41px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #4356d6;
+  background: #4356d6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contact-btn:hover {
+  background: #fff;
+  color: #4356d6;
+}
+
+/* Hamburger — hidden on desktop */
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  background: none;
+  padding: 0;
+}
+
+.hamburger img {
+  display: block;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+  z-index: 90;
+}
+
+.menu-backdrop.is-visible {
+  opacity: 1;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 375px;
+  max-width: calc(100vw - 24px);
+  height: 100vh;
+  background: #f5f5fb;
+  box-shadow: -20px 0 40px rgba(0, 0, 0, 0.12);
+  transform: translateX(100%);
+  transition: transform 0.24s ease;
+  z-index: 100;
+  padding: 14px 18px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.mobile-menu-logo {
+  width: 110px;
+  height: auto;
+}
+
+.menu-close {
+  background: none;
+  color: #4356d6;
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 4px 0 0;
+}
+
+.mobile-menu-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #2a2a2a;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 2px 0;
+}
+
+.mobile-menu-links a i {
+  width: 22px;
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+}
+
+.mobile-menu-links a.active {
+  color: #4356d6;
+}
+
+.mobile-menu-links a.active i {
+  color: #4356d6;
+}
+
+.mobile-menu-btn {
+  margin-top: 28px;
+  width: 100%;
+  height: 42px;
+  border-radius: 6px;
+  background: #4356d6;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* =============================================
+   HERO SECTION — Desktop
+   ============================================= */
+.hero-section {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.hero-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+/* LEFT */
+.hero-content {
+  position: relative;
+  max-width: 606px;
+}
+
+/* H1: 64px / 85px / Bold */
+.hero-heading {
+  font-size: 64px;
+  line-height: 85px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* "Compliance" — blue with underline image */
+.highlight {
+  position: relative;
+  display: inline-block;
+  color: #4356d6;
+}
+
+.underline {
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 349px;
+  height: 19px;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+/* Description: 18px / 32px / Regular */
+.hero-description {
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #000;
+}
+
+/* Features list */
+.features-wrapper {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-item i {
+  color: #4356d6;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* Feature text: 18px / 32px / Regular */
+.feature-item span {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #000;
+}
+
+/* Buttons */
+.hero-buttons {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.primary-btn {
+  width: 180px;
+  height: 46px;
+  border-radius: 8px;
+  border: 1px solid #4356d6;
+  background: #4356d6;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.primary-btn:hover {
+  background: #fff;
+  color: #4356d6;
+}
+
+.secondary-btn {
+  width: 180px;
+  height: 46px;
+  border-radius: 8px;
+  border: 1px solid #4356d6;
+  background: #fff;
+  color: #4356d6;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.secondary-btn:hover {
+  background: #4356d6;
+  color: #fff;
+}
+
+/* RIGHT — Banner image */
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner-image {
+  width: 100%;
+  max-width: 606px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =============================================
+   SECOND SECTION — Desktop
+   ============================================= */
+.compliance-section {
+  padding-bottom: 100px;
+}
+
+.compliance-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* LEFT */
+.section-heading-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+/* H2: 48px / 70px / Semibold */
+.section-heading-wrapper h2 {
+  font-size: 48px;
+  line-height: 70px;
+  font-weight: 600;
+  color: #000;
+}
+
+.section-heading-wrapper span {
+  color: #4356d6;
+}
+
+.dashboard-wrapper .curly-arrow {
+  position: absolute;
+  /* place the arrow beside the heading, relative to the dashboard */
+  right: -0px;
+  top: -90px;
+  width: 48px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.95;
+  display: block;
+  z-index: 2;
+}
+.dashboard-wrapper {
+  position: relative;
+  margin-top: 50px;
+  overflow: visible;
+}
+
+.dashboard-image {
+  width: 100%;
+  max-width: 594px;
+  height: 30%;
+  object-fit: contain;
+}
+
+/* Chevron arrows — decorative, bottom-left of image */
+.dashboard-decor {
+  position: absolute;
+  left: -80px;
+  bottom: -40px;
+  width: 110px;
+  height: 34px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* RIGHT */
+
+/* Description: 18px / 32px / Regular */
+.compliance-description {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #000;
+  max-width: 600px;
+}
+
+.card-wrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Desktop card: has background box */
+.info-card {
+  background: #f7f7fb;
+  border: 1px solid #e2e6ff;
+  border-radius: 10px;
+  padding: 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.info-card img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Card title: 24px / 32px / Semibold (Large Title spec) */
+.info-card h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+/* Card body: 18px / 32px / Regular */
+.info-card p {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #000;
+}
+
+/* Hover */
+.info-card:hover {
+  background: #fff;
+  border-color: #4356d6;
+}
+
+.info-card:hover h3 {
+  color: #1f35b9;
+}
+
+/* =============================================
+   TABLET — 768px to 1199px
+   ============================================= */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  /* Container */
+  .container {
+    padding: 0 40px;
+  }
+
+  /* ── NAVBAR ── */
+  .nav-wrapper {
+    height: 80px;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .logo-wrapper {
+    order: unset;
+    margin-left: 0;
+  }
+
+  .contact-btn {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+    order: unset;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: 0;
+    order: unset;
+  }
+
+  /* Hide all nav links */
+  .nav-links {
+    display: none;
+  }
+
+  /* ── HERO ── */
+  .hero-section {
+    padding-top: 48px;
+    padding-bottom: 60px;
+  }
+
+  /* Tablet hero: 2 columns — content left, image right */
+  .hero-wrapper {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  /* H1: 54px / 75px / Bold */
+  .hero-heading {
+    font-size: 54px;
+    line-height: 75px;
+    font-weight: 700;
+  }
+
+  /* Scale underline to match "Compliance" at 54px */
+  .underline {
+    width: 280px;
+    height: 16px;
+  }
+
+  /* Description: 18px / 32px — no change */
+  .hero-description {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  /* Features — no change in font */
+  .feature-item span {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  /* Tablet buttons: only "Get Started" visible */
+  .hero-buttons {
+    gap: 16px;
+  }
+
+  .secondary-btn {
+    display: none;
+  }
+
+  .primary-btn {
+    width: 180px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  /* Banner image — right column */
+  .hero-image-wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-banner-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ── SECTION 2 ── */
+  .compliance-section {
+    padding-bottom: 80px;
+  }
+
+  /* Single column on tablet */
+  .compliance-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-heading-wrapper {
+    width: 100%;
+  }
+
+  /* H2: 46px / 60px / Semibold */
+  .section-heading-wrapper h2 {
+    font-size: 46px;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  .curly-arrow {
+    display: block;
+    position: absolute;
+    top: 220px; /* lowered to sit beside the image */
+    right: 48px; /* nudge inward from edge */
+    width: 60px;
+    height: auto;
+  }
+
+  .dashboard-wrapper {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .dashboard-image {
+    width: 100%;
+    max-width: 420px; /* smaller for tablet layout */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Position curly arrow relative to the dashboard image */
+  .dashboard-wrapper .curly-arrow {
+    position: absolute;
+    right: -36px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 72px;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.95;
+  }
+
+  .dashboard-decor {
+    display: block;
+    position: absolute;
+    left: -8px;
+    bottom: -30px; /* moved down by 20px for tablet */
+    width: 110px;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.95;
+  }
+
+  /* paragraph width and spacing */
+  .compliance-description {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    text-align: center;
+  }
+
+  .mobile-menu {
+    width: 282px;
+    max-width: 282px;
+    padding: 12px 12px 12px;
+  }
+
+  .mobile-menu-header {
+    margin-bottom: 60px;
+  }
+
+  .mobile-menu-logo {
+    width: 98px;
+  }
+
+  .mobile-menu-links {
+    gap: 40px;
+    padding-top: 2px;
+  }
+
+  .mobile-menu-links a {
+    gap: 20px;
+    font-size: 14px;
+    padding: 2px 0;
+  }
+
+  .mobile-menu-btn {
+    margin-top: 40px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  /* Right side */
+  .compliance-description {
+    font-size: 18px;
+    line-height: 32px;
+    max-width: 100%;
+  }
+
+  .card-wrapper {
+    margin-top: 40px;
+    gap: 28px;
+  }
+
+  /* Reorder content into: heading -> description -> image -> cards (tablet)
+     Use display:contents to expose inner children for ordering. */
+  .compliance-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .compliance-left,
+  .compliance-right {
+    display: contents;
+  }
+
+  .section-heading-wrapper { order: 1; }
+  .compliance-description { order: 2; }
+  .dashboard-wrapper { order: 3; }
+  .card-wrapper { order: 4; }
+
+  /* Tablet cards: boxed style similar to desktop but slightly reduced padding */
+  .info-card {
+    background: #fff;
+    border: 1px solid #e2e6ff;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 16px;
+    align-items: flex-start;
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+
+  .info-card:hover {
+    background: #fff;
+    border-color: #4356d6;
+  }
+
+  /* Title: 20px / 32px / Medium */
+  .info-card h3 {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .info-card:hover h3 {
+    color: #4356d6;
+  }
+
+  .info-card p {
+    margin-top: 6px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* =============================================
+   MOBILE — max-width 767px
+   ============================================= */
+@media (max-width: 767px) {
+
+  /* Container */
+  .container {
+    padding: 0 20px;
+  }
+
+  /* ── NAVBAR ── */
+  .nav-wrapper {
+    height: 64px;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  /* Hide nav links */
+  .nav-links {
+    display: none;
+  }
+
+  /* Hide Contact Us button — only hamburger on mobile */
+  .contact-btn {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    width: min(100vw, 375px);
+    padding: 12px 14px 12px;
+  }
+
+  .mobile-menu-header {
+    margin-bottom: 60px;
+  }
+
+  .mobile-menu-links {
+    gap: 40px;
+  }
+
+  .mobile-menu-btn {
+    margin-top: 40px;
+    height: 40px;
+  }
+
+  /* Show and nudge the dashboard chevrons down on mobile as well */
+  .dashboard-decor {
+    display: block;
+    left: -24px;
+    bottom: -30px; /* moved down by 20px for mobile */
+    width: 90px;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.95;
+  }
+
+  /* ── HERO ── */
+  .hero-section {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+
+  /* Single column */
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  /* Use flex column for compliance section on mobile and move description above image */
+  .compliance-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .compliance-left,
+  .compliance-right {
+    display: contents;
+  }
+
+  .section-heading-wrapper { order: 1; }
+  .compliance-description { order: 2; }
+  .dashboard-wrapper { order: 3; }
+  .card-wrapper { order: 4; }
+
+  /* H1: 38px / 48px / Bold — centered */
+  .hero-heading {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  /* Scale underline for smaller "Compliance" word */
+  .underline {
+    width: 190px;
+    height: 12px;
+    bottom: -5px;
+  }
+
+  /* Description: 18px / 32px — centered */
+  .hero-description {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Features — left aligned */
+  .features-wrapper {
+    margin-top: 20px;
+    gap: 8px;
+  }
+
+  .feature-item {
+    align-items: flex-start;
+  }
+
+  .feature-item span {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  /* Buttons: full width, stacked */
+  .hero-buttons {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .primary-btn {
+    width: 100%;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .secondary-btn {
+    width: 100%;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  /* Banner image below text */
+  .hero-image-wrapper {
+    justify-content: center;
+  }
+
+  .hero-banner-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  /* ── SECTION 2 ── */
+  .compliance-section {
+    padding-bottom: 60px;
+  }
+
+  .compliance-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .section-heading-wrapper {
+    width: 100%;
+  }
+
+  /* H2: 34px / 48px / Semibold — centered */
+  .section-heading-wrapper h2 {
+    font-size: 34px;
+    line-height: 48px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .curly-arrow {
+    display: none;
+  }
+
+  .dashboard-wrapper {
+    margin-top: 28px;
+  }
+
+  .dashboard-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Show chevron arrows on mobile (visible in design) */
+  .dashboard-decor {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 90px;
+    height: auto;
+    margin-top: 16px;
+    transform: translateY(20px);
+  }
+
+  /* Description: centered */
+  .compliance-description {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .card-wrapper {
+    margin-top: 32px;
+    gap: 24px;
+  }
+
+  /* Mobile cards: NO box — icon + text only */
+  .info-card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .info-card:hover {
+    background: transparent;
+    border-color: transparent;
+  }
+
+  /* Title: 19px / auto / Medium */
+  .info-card h3 {
+    font-size: 19px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  .info-card:hover h3 {
+    color: #4356d6;
+  }
+
+  .info-card p {
+    margin-top: 6px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}

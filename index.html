@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliance Landing Page</title>
+
+    <!-- Google Font: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="container nav-wrapper">
+
+        <!-- LOGO -->
+        <div class="logo-wrapper">
+          <img src="./assets/logo.png" alt="logo" />
+        </div>
+
+        <!-- NAV LINKS (desktop only) -->
+        <nav class="nav-links">
+          <a class="active" href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Our Services</a>
+          <a href="#">Pricing</a>
+          <a href="#">FAQ</a>
+          <a href="#">Contact</a>
+        </nav>
+
+        <!-- Contact Us button (desktop + tablet) -->
+        <button class="contact-btn">
+          <i class="fa-solid fa-phone"></i>
+          Contact Us
+        </button>
+
+        <!-- Menu icon for tablet/mobile -->
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <img src="./assets/Menu.png" alt="Menu" />
+        </button>
+
+      </div>
+    </header>
+
+    <div class="menu-backdrop" hidden></div>
+
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-header">
+        <img src="./assets/logo.png" alt="logo" class="mobile-menu-logo" />
+
+        <button type="button" class="menu-close" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="mobile-menu-links" aria-label="Mobile navigation">
+        <a class="active" href="#">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="#">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>About Us</span>
+        </a>
+        <a href="#">
+          <i class="fa-solid fa-gears"></i>
+          <span>Our Services</span>
+        </a>
+        <a href="#">
+          <i class="fa-solid fa-tag"></i>
+          <span>Pricing</span>
+        </a>
+        <a href="#">
+          <i class="fa-solid fa-circle-question"></i>
+          <span>FAQ</span>
+        </a>
+        <a href="#">
+          <i class="fa-solid fa-address-book"></i>
+          <span>Contact</span>
+        </a>
+      </nav>
+
+      <button class="mobile-menu-btn" type="button">Contact Us</button>
+    </aside>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section">
+      <div class="container hero-wrapper">
+
+        <!-- LEFT content -->
+        <div class="hero-content">
+
+          <h1 class="hero-heading">
+            Simplifying
+            <br />
+            <span class="highlight">
+              Compliance
+              <img
+                src="./assets/underline-Vector.png"
+                alt=""
+                class="underline"
+              />
+            </span>
+            For
+            <br />
+            Research Analysts
+          </h1>
+
+          <p class="hero-description">
+            Stay Focused On Your Insights—We'll Handle The Compliance. Our
+            Expert Solutions Ensure Your Research Practices Meet Every
+            Regulatory Requirement With Confidence And Ease
+          </p>
+
+          <div class="features-wrapper">
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>End-To-End Compliance Support</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Regulatory Filings Made Simple</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Tailored Solutions For Independent Analysts &amp; Firms</span>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <button class="primary-btn">Get Started</button>
+            <button class="secondary-btn">Book A Consultation</button>
+          </div>
+
+        </div>
+
+        <!-- RIGHT banner image -->
+        <div class="hero-image-wrapper">
+          <img
+            src="./assets/Banner Image.png"
+            alt="Compliance professional"
+            class="hero-banner-image"
+          />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECOND SECTION ================= -->
+    <section class="compliance-section">
+      <div class="container compliance-wrapper">
+
+        <!-- LEFT heading + image -->
+        <div class="compliance-left">
+          <div class="section-heading-wrapper">
+            <h2>
+              Why
+              <span>Compliance Matters</span>
+              <br />
+              For Research Analysts
+            </h2>
+            
+          </div>
+
+          <div class="dashboard-wrapper">
+            <img
+              src="./assets/Section2-Image.png"
+              alt="Compliance dashboard"
+              class="dashboard-image"
+            />
+              <img src="./assets/Vector2.png" alt="" class="curly-arrow" />
+            <img
+              src="./assets/Vector1.png"
+              alt=""
+              class="dashboard-decor"
+            />
+          </div>
+        </div>
+
+        <!-- RIGHT description + cards -->
+        <div class="compliance-right">
+
+          <p class="compliance-description">
+            In Today's Regulatory Environment, Even A Small Oversight Can Lead
+            To Penalties, Reputational Risks, And Loss Of Client Trust. We Help
+            Research Analysts And Firms Navigate Complex Compliance Requirements
+            So They Can Focus On Delivering High-Quality Research Without Worry.
+          </p>
+
+          <div class="card-wrapper">
+
+            <div class="info-card">
+              <img src="./assets/Regulatory Clarity.png" alt="" />
+              <div>
+                <h3>Regulatory Clarity</h3>
+                <p>We Decode Complex Compliance Rules Into Simple, Actionable Steps.</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <img src="./assets/Hassle-Free Filings Clarity.png" alt="" />
+              <div>
+                <h3>Hassle-Free Filings Clarity</h3>
+                <p>From Registration To Ongoing Reporting—We Manage It End-To-End.</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <img src="./assets/Risk Protection.png" alt="" />
+              <div>
+                <h3>Risk Protection</h3>
+                <p>Stay Ahead Of Audits, Inspections, And Compliance Gaps With Proactive Support.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <script>
+      const menuButton = document.querySelector('.hamburger');
+      const closeButton = document.querySelector('.menu-close');
+      const menuPanel = document.querySelector('.mobile-menu');
+      const backdrop = document.querySelector('.menu-backdrop');
+
+      function openMenu() {
+        menuPanel.classList.add('is-open');
+        backdrop.hidden = false;
+        requestAnimationFrame(() => {
+          backdrop.classList.add('is-visible');
+        });
+        document.body.classList.add('menu-open');
+        menuButton.setAttribute('aria-expanded', 'true');
+        menuPanel.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeMenu() {
+        menuPanel.classList.remove('is-open');
+        backdrop.classList.remove('is-visible');
+        document.body.classList.remove('menu-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuPanel.setAttribute('aria-hidden', 'true');
+
+        window.setTimeout(() => {
+          if (!menuPanel.classList.contains('is-open')) {
+            backdrop.hidden = true;
+          }
+        }, 220);
+      }
+
+      menuButton?.addEventListener('click', openMenu);
+      closeButton?.addEventListener('click', closeMenu);
+      backdrop?.addEventListener('click', closeMenu);
+    </script>
+
+  </body>
+</html>
